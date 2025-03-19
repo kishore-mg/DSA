@@ -1,0 +1,39 @@
+Mathematical Concepts:
+
+Before jumping in, why do we require mathematical concepts?
+ - The mathematical concepts will help in number theory, optimization, and bitwise manipulations, which are useful in many algorithms.
+
+1. Factorial Calculation (Recursive vs Iterative)
+
+Formula
+N = n * (n-1) * (n-2) * .... * 1
+
+Example:
+5! = 5 * 4 * 3 * 2 * 1 = 120
+
+Can be solved in two ways:
+1. Iterative approach
+2. Recursive
+
+Both the complexity O(n)
+
+Iterative:
+
+long FactorialIterative(int n) {
+    long fact = 1;
+    for (int i = 2; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+Recursive:
+
+long FactorialRecursive(int n) {
+    if (n == 0 || n == 1) return 1;
+    return n * FactorialRecursive(n - 1);
+}
+
+IMPORTANT: 
+1. Iterative is preferred because recursion uses extra memory (stack calls).
+2. However, recursion is useful for problems like backtracking and divide & conquer.

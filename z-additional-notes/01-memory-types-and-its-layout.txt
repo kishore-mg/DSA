@@ -1,0 +1,71 @@
+What memories are available in programming?
+1. Call stack -> Stores function calls, local variables and return addresses
+2. Heap -> Stores dynamic data like objects created using "new"
+3. Code segments -> Compiled Code
+
+Note: Each thread in c# has its own stack.
+
+How recursion works?
+Whenever, a function is called, a new stack frame is added in the call stack.
+
+A stack frame will contain the following details:
+1. Return address (where to return after function execution)
+2. Local variables
+3. Function parameters
+4. Saved Registers.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What are saved registers?
+Before jumping into saved reigsters, are you curious on what does the registers mean?
+Oh, actually, I'm quite curious myself.
+
+Registers are the small and fast storage locations available on our CPUs. Majorily used to store temporary values for computations.
+As CPU uses it to store temporary data, we can't guarantee that it will hold our information in the registers. 
+
+So, that's where the saved registers comes in.
+
+The saved registers are nothing but the temporary data stored in the registers related to the function which is kind of a backup when a 
+function calls another function. So, generally, the registers are shared resources which has a possibility of getting overwritten by functions.
+
+So, the required register informations are stored as a backup and will be restored when the function returns to resume the caller function state.
+
+Additional Details:
+1. The stack frame is managed and used by compiler and runtime.
+2. Registers are directly controlled by CPU for faster execution.
+
+Stack Frames (Compiler & Runtime)	                                                            Registers (CPU)
+Used for function calls and memory management.	                                                Used for storing temporary values for immediate execution.
+Stores function arguments, return address, local variables, and saved registers (if needed).	Stores intermediate values, operands, and function arguments (if they fit).
+Grows and shrinks dynamically during function calls (LIFO order).	                            Constantly overwritten by the CPU as execution continues.
+Lives in RAM (Stack section of memory).	                                                        Lives inside the CPU (fastest memory).
+
+--------------------------------------------------------------------------------------------------------------------
+
+Code Segments or Text Segments
+
+ - Stored in the main memory of RAM.
+ - In a region where the read-only executable instruction of a program is stored.
+ - Fixed in size and does not grow like stack or heap.
+ - Load at startup of the application.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Heap memory
+
+ - Slower than registers and stacks as it requires more management.
+ - Not freed automatically (manual deallocation or garbage collector is requried)
+ - Grows or shrinks at runtime as needed.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Memory layout 
+
+0x0000000000000000  →  Low Memory Addresses
+------------------------------------------------------
+|  Code Segment (Machine Code)         |  
+|  Data Segment (Global/Static Vars)   |  
+|  Heap (Dynamic Allocations)          |  Grows Up  
+|  Stack (Function Calls, Local Vars)  |  Grows Down  
+------------------------------------------------------
+0xFFFFFFFFFFFFFFFF  →  High Memory Addresses

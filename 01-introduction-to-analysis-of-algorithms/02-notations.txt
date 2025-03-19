@@ -1,0 +1,63 @@
+Notations:
+Order of growth can be classified in three notations:
+1. Big-O 'O' -> Upper bound -> Worst case
+2. Theta 'Θ' -> Tight bound -> Average case
+3. Omega 'Ω' -> Lower bound -> best case
+
+
+Notation	Definition	Meaning	Use Case
+Big-O (O)	Upper bound	The worst-case scenario	Guarantees that an algorithm never exceeds a certain runtime
+Theta (Θ)	Tight bound	The exact or average-case scenario	Defines the precise rate of growth
+Omega (Ω)	Lower bound	The best-case scenario	Guarantees that an algorithm takes at least a certain runtime
+
+--------------------------------------------------------------------------------------------------------------------
+Big-O (O)
+
+Lets take a Linear search algorithm.
+
+int LinearSearch(int[] arr, int target) {
+    for (int i = 0; i < arr.Length; i++) {
+        if (arr[i] == target) return i; // Found
+    }
+    return -1; // Not found
+}
+
+Best case - O(1) - Why? -> Because, the target number can be found in the first iteration itself.
+Worst case - O(n) - Why? -> Assume, the target number doesn't match with any number in the array.
+
+Big-O focuses on the worst case, so Linear Search is O(n).
+--------------------------------------------------------------------------------------------------------------------
+Theta (Θ)
+
+Lets take a simple loop.
+
+Best Case: Ω(n)
+Worst Case: O(n)
+
+Both upper bound and lower bound cases are same which is O(n).
+
+Theta is useful when best-case and worst-case complexities are the same.
+--------------------------------------------------------------------------------------------------------------------
+Omega (Ω)
+
+Omega describes the best case of the performance.
+
+For Bubble Sort, in the best case, the array is already sorted:
+
+The best-case complexity is Ω(n) (one pass to check order).
+The worst-case complexity is O(n²) (full sorting needed).
+
+Omega is useful when analyzing how fast an algorithm can possibly run.
+--------------------------------------------------------------------------------------------------------------------
+Summary:
+
+Let’s say an algorithm takes different times depending on input:
+
+Input Size (n)	Best Case (Ω)	Average Case (Θ)	Worst Case (O)
+n = 10	            5 ms	         50 ms	           100 ms
+n = 1000	        10 ms	         500 ms	           10 sec
+n = 10⁶	            100 ms	         5 sec	           100 sec
+
+Big-O (O) tells us the worst-case scenario: "It won’t take more than this time."
+Theta (Θ) tells us the typical case: "It usually runs in this time."
+Omega (Ω) tells us the best-case: "It will take at least this much time."

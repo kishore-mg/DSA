@@ -1,0 +1,40 @@
+There are two parameters are taken as input to measure the performance and efficiency of a program.
+
+Order of Growth:
+It is a set of function whose Asymptotic growth behaviour is considered equivalent.
+ - Grouping of algorithms whose asymptotic growth behaviour is considered equivalent.
+
+Asymptotic growth:
+Tells how an algorithm behaves when 'n' (input) tends to infinity. (i.e., when input size grows large).
+
+Asymptote
+A line (or a curve) of function or sequence gets closer and closer to but never reaches the limit of infinity.
+
+Note: Consider a function where using the input and its result, a graph can be plotted. That is the line or curve being mentioned above.
+
+Types of Asymptote:
+1. Horizontal => f(x) = 1/x
+2. Vertical   => g(x) = 1/(x-2)
+
+Example:
+f(x) = 1/x
+
+ x     f(x)  
+ 1     1
+ 10    0.1
+ 100   0.01
+ 1000  0.0001
+ 
+As x = infinite, f(x) => 0
+Explanation: Now, if you see, when input increases, it tends to zero but never reaches 0. This is what closer and closer means.
+
+In simple terms, we will try to touch a shadow but can never do it. 
+
+Example:
+For example, when we plot a graph for all of these functions, then it will resemble to the O(n²) class:
+
+f(n) = n² + 3n + 2
+g(n) = 5n² + 100n + 7
+h(n) = 2n² + 500
+
+Why? Because for large n, the n² term dominates, and we ignore constants and lower-order terms.
