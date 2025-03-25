@@ -1,0 +1,31 @@
+We already know what is recursion. Okay, i think its time to recollect.
+
+What is recursion?
+A recursion is a technique where a function calls itself until a base condition is met.
+
+Okay, everyone might feel like, it looks similar to iteration. What difference does this make? 
+Can't the problems be solved in iterative approach. I too had this question in my mind.
+
+--- Need to fill in the answer ---
+
+In recursion, there are two types:
+1. Tail recursion
+2. Non-tail recursion
+
+In tail recursion, the last operation is the recursive call but in non-tail recursion, the last operation
+can be someother operations too.
+
+Tail Recursion Example:
+void TailRecursion(int n) {
+    if (n == 0) return;
+    Console.WriteLine(n);
+    TailRecursion(n - 1); // Last operation is the recursive call
+}
+
+Non-Tail Recursion Example:
+int Sum(int n) {
+    if (n == 0) return 0;
+    return n + Sum(n - 1);  // Recursive call is NOT the last operation
+}
+
+As per other lanugages, the non-tail recursion uses more stack space but the c# compiler doesn't apply any optimizations.
