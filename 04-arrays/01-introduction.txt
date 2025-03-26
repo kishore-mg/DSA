@@ -1,0 +1,17 @@
+What is an array?
+An array is a collection of elements/values stored in a contiguous (next or together in sequence) memory locations.
+
+Example:
+
+// Declaration and Initialization
+int[] arr = new int[5]; // Empty array of size 5
+int[] arr2 = {1, 2, 3, 4, 5}; // Predefined values
+
+// Accessing and Modifying Elements
+arr[0] = 10;
+Console.WriteLine(arr2[2]); // Output: 3
+
+// Traversing an Array
+foreach (int num in arr2) {
+    Console.Write(num + " ");
+}
