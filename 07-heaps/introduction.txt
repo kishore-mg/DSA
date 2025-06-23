@@ -1,0 +1,42 @@
+Heaps is a binary tree where
+ - It will always be a complete tree.
+
+Complete Tree - Fills from left to right without any gaps.
+
+       50
+     /    \
+    30    40
+   /  \   / 
+  10   5 20
+
+Not a complete tree as it contains a gap
+       50
+     /    \
+    30    40
+   /      / 
+  10     20
+
+
+Max Heap
+- The top node will be max/greatest one when compared with their decendants.
+Example
+        50
+       /  \
+     30    40
+    / \   / 
+   10  5 20
+
+Min Heap
+- The top node will be minimum when compared with their decendants.
+Example
+        5
+       / \
+     10  20
+    / \  /
+   30 40 50
+
+The heap can be represented in ArrayList instead of Node class.
+
+leftChild = 2 * parentIndex
+rightChild = 2 * parentIndex + 1
+

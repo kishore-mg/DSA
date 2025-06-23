@@ -1,0 +1,51 @@
+A graph consist of vertices and edges.
+
+A - B
+|
+C - D
+
+A -> Vertex or Node
+- | -> Edge or Connection
+
+
+Edges can be weighted 
+ - Used in google maps to choose the best route
+ - Network routing where taking a extra hop can be reduce latency
+
+Edges can be 
+ - Weighted
+ - Non weighted
+ - Directional
+ - Bi-Directional
+
+LinkedList is a form of tree and tree is a form of graph.
+
+Need more understanding on adjacency matrix
+
+Graph can be represented in two ways
+1. Adjacency matrix
+2. Adjacency list - HashMap
+
+Time Complexity:
+Add Vertex
+ - O(V^2) - AM
+ - O(1)   - AL
+
+Add Edge
+ - O(1) - AM
+ - O(1) - AL
+
+Remove Edge
+ - O(1) - AM
+ - O(E) - AL
+
+Remove Vertex
+ - O(V^2) - AM
+ - O(V + E) - AL
+
+V - no of vertices
+E - no of edges
+
+One of the greatest advantage with AL compared to AM is that
+The AM stores zero value for billions of parameters or columns 
+in the matrix which is not space efficient.

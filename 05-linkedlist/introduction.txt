@@ -1,0 +1,37 @@
+Linked List:
+An linkedList is a series of node where each node has a pointer reference to another node in the series and with a value. Each node is stored in a separate memory location.
+
+In terms of memory, the values are not stored in contiguous order which has both pros and cons.
+
+Pros:
+1. As it is contiguous, the value can be stored at any location and can be referred. Hence no length or capacity limitation.
+2. Great for frequent insertion and deletion.
+
+Cons:
+1. As it is contiguous, quick reference by index is not possible. So, requires iterating throughout the list for searching or for other operations.
+2. Not good at searching or at accessing.
+
+Quick Comparison between array and linkedList:
+Operation | Array (Static/Dynamic) | Linked List (Singly/Doubly)
+Access | O(1) | O(n)
+Search | O(n) | O(n)
+Insert at end | O(1) (amortized)* | O(n) (singly), O(1) (tail ref)
+Insert at beginning | O(n) (shift elements) | O(1)
+Insert in middle | O(n) | O(n)
+Delete at end | O(1) (amortized)* | O(n) (singly), O(1) (doubly with tail)
+Delete at beginning | O(n) | O(1)
+Delete in middle | O(n) | O(n)
+
+
+Memory Usage:
+Feature | Array | Linked List
+Memory allocation | Contiguous block | Non-contiguous nodes
+Memory overhead | Minimal (only data) | Higher (data + pointer(s))
+Wasted space | Possible (if over-allocated) | None (but uses more per node)
+Cache friendliness | High (due to locality) | Poor (pointers scatter in memory)
+
+
+
+
+Algorithms:
+1. Floyd's tortorise and hare Algorithm (Slow and fast pointer algorithm)
